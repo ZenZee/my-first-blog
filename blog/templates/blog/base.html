@@ -10,6 +10,9 @@
 
   <body>
       <div class="page-header">
+        {% if user.is_authenticated %}
+            <a href="{% url "post_new" %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+        {% endif %}
           <h1><a href="/">Zenzele's Awesome Blog</a></h1>
           <h2>The Best Blog in the World</h2>
       </div>
