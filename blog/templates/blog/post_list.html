@@ -8,16 +8,13 @@
       <h2>Welcome To The Best Blog in the World</h2>
     </div>
 
-    <div>
-      <p>Hi There!</p><br>
-    </div>
+    {% for post in posts %}
+      <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaks }}</p>
+      </div>
+  {% endfor %}
 
-    <div>
-      <p>Reasons why this blog rocks</p><br>
-        <ul>
-          <li>I made it, duh</li>
-          <li>Django is the best</li>
-          <li>The internet makes all things possible</li>
-    </div>
   </body>
 </html>
